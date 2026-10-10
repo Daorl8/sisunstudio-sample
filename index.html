@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SISUN STUDIO 시선스튜디오 | Premium Lash Studio · 인천 구월동 속눈썹</title>
 <meta name="description" content="Premium lash studio in Guwol-dong, Incheon. 인천 구월동 속눈썹 전문 시선스튜디오. 눈매 맞춤 퍼스널 속눈썹연장·속눈썹펌·눈썹문신. 모근보호기법, KC 인증 글루, 프라이빗 시술룸." />
-<meta name="theme-color" content="#D1C1B1" />
+<meta name="theme-color" content="#FFFFFF" />
 
 <link rel="canonical" href="https://sisunstudio-sample.lgt3232.workers.dev/" />
 <meta property="og:type" content="website" />
@@ -60,7 +60,7 @@
    규칙 ① 그림자 없음, 1px 선과 여백 ② 모서리 0 ③ 왼쪽 색 띠 박스 금지
    ============================================================ */
 :root{
-  --mist:#E6DFD5;         /* 기본 지면 */
+  --mist:#EFEBE5;         /* v0.3 연한 베이지 그레이 (흰 바탕에 섞는 면) */
   --sand:#D1C1B1;         /* 다올 지정 색 1 */
   --stone:#C8C2B2;        /* 다올 지정 색 2 */
   --white:#FFFFFF;
@@ -80,7 +80,7 @@
 html{ -webkit-text-size-adjust:100%; }
 html, body{ max-width:100%; overflow-x:hidden; }
 @supports (overflow:clip){ html, body{ overflow-x:clip; } }
-body{ margin:0; font-family:var(--ko); color:var(--ink); background:var(--mist); line-height:1.75; letter-spacing:-.005em; -webkit-font-smoothing:antialiased; word-break:keep-all; }
+body{ margin:0; font-family:var(--ko); color:var(--ink); background:var(--white); line-height:1.75; letter-spacing:-.005em; -webkit-font-smoothing:antialiased; word-break:keep-all; }
 body.lock{ overflow:hidden; }
 img{ max-width:100%; height:auto; display:block; }
 a{ color:inherit; text-decoration:none; }
@@ -107,7 +107,7 @@ h1,h2,h3,h4{ margin:0; font-weight:400; }
 /* ---------- 버튼 ---------- */
 .btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:1em 1.6em; font-family:var(--serif); font-weight:500; font-size:.76rem; letter-spacing:.24em; text-transform:uppercase; border:1px solid var(--ink); background:transparent; cursor:pointer; transition:background .25s ease, color .25s ease, border-color .25s ease; }
 .btn small{ font-family:var(--ko); font-size:.8rem; letter-spacing:0; text-transform:none; font-weight:500; }
-.btn.dark{ background:var(--ink); color:var(--mist); }
+.btn.dark{ background:var(--ink); color:var(--white); }
 .btn.white{ background:var(--white); border-color:var(--white); }
 .btn.pink{ background:var(--pink); border-color:var(--pink); }
 @media (hover:hover){
@@ -117,7 +117,7 @@ h1,h2,h3,h4{ margin:0; font-weight:400; }
 .btns{ display:flex; flex-wrap:wrap; gap:10px; }
 
 /* ---------- 헤더 ---------- */
-.site-head{ position:sticky; top:0; z-index:50; background:rgba(230,223,213,.94); border-bottom:1px solid var(--line); }
+.site-head{ position:sticky; top:0; z-index:50; background:rgba(255,255,255,.94); border-bottom:1px solid var(--line); }
 .site-head .wrap{ display:flex; align-items:center; justify-content:space-between; gap:14px; height:68px; }
 .mark{ font-family:var(--disp); font-weight:500; font-size:1.05rem; letter-spacing:.42em; }
 .nav{ display:flex; align-items:center; gap:clamp(16px,2.4vw,32px); }
@@ -135,7 +135,7 @@ h1,h2,h3,h4{ margin:0; font-weight:400; }
 .hero .ko-line{ margin:22px 0 0; font-size:1.02rem; font-weight:500; }
 .hero .lead{ margin:10px 0 0; max-width:32em; color:var(--soft); font-size:.96rem; }
 .hero .btns{ margin-top:30px; }
-.frame{ position:relative; background:var(--white); padding:14px 14px 54px; }
+.frame{ position:relative; background:var(--mist); padding:14px 14px 54px; }
 .frame .ph{ overflow:hidden; aspect-ratio:4/5; background:var(--sand); }
 .frame .ph img{ width:100%; height:100%; object-fit:cover; transform:scale(1.06); transition:transform 2.4s cubic-bezier(.2,.6,.2,1); }
 .frame.in .ph img{ transform:scale(1); }
@@ -148,6 +148,7 @@ h1,h2,h3,h4{ margin:0; font-weight:400; }
 .sec.sand{ background:var(--sand); }
 .sec.stone{ background:var(--stone); }
 .sec.white{ background:var(--white); }
+.sec.mist{ background:var(--mist); }
 .head{ display:grid; gap:14px; margin-bottom:clamp(36px,5vw,64px); }
 .head .caps{ color:var(--soft); }
 .head h2{ font-family:var(--disp); font-weight:450; font-size:clamp(2.3rem,6vw,4.2rem); line-height:1.05; letter-spacing:-.015em; }
@@ -161,6 +162,7 @@ h1,h2,h3,h4{ margin:0; font-weight:400; }
 .manifesto blockquote small{ display:block; margin-top:18px; font-family:var(--ko); font-size:.92rem; color:var(--soft); line-height:1.8; }
 .trio{ display:flex; gap:clamp(18px,4vw,48px); margin-top:30px; flex-wrap:wrap; }
 .trio span{ font-family:var(--disp); font-style:italic; font-size:1.25rem; border-bottom:1px solid var(--pink-2); padding-bottom:2px; }
+.trio .ko-s{ font-style:normal; }   /* 한글 가짜 이탤릭 방지 */
 .vows{ list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
 .vows li{ display:grid; grid-template-columns:52px 1fr; padding:18px 0; border-bottom:1px solid var(--line); }
 .vows .n{ font-family:var(--disp); font-style:italic; font-size:1.1rem; color:var(--soft); }
@@ -169,7 +171,8 @@ h1,h2,h3,h4{ margin:0; font-weight:400; }
 
 /* ---------- 메뉴 (가격) ---------- */
 .menu{ display:grid; gap:clamp(40px,6vw,80px); }
-.list{ background:var(--white); padding:clamp(22px,3.6vw,38px); }
+.list{ background:var(--mist); padding:clamp(22px,3.6vw,38px); }
+#brow .list{ background:var(--white); }
 .list h3{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding-bottom:14px; border-bottom:1px solid var(--pink-2); font-family:var(--disp); font-weight:450; font-size:clamp(1.6rem,3.4vw,2.2rem); }
 .list h3 .caps{ font-family:var(--ko); font-size:.8rem; letter-spacing:.06em; color:var(--soft); }   /* 한글 라벨은 넓은 자간 X */
 .list dl{ margin:0; }
@@ -201,7 +204,7 @@ h1,h2,h3,h4{ margin:0; font-weight:400; }
 .shot.hide{ display:none; }
 @media (hover:hover){ .shot:hover img{ transform:scale(1.04); } }
 .more{ display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:34px; }
-.lb{ position:fixed; inset:0; z-index:100; background:rgba(230,223,213,.97); display:none; align-items:center; justify-content:center; padding:60px 14px 70px; }
+.lb{ position:fixed; inset:0; z-index:100; background:rgba(255,255,255,.97); display:none; align-items:center; justify-content:center; padding:60px 14px 70px; }
 .lb.open{ display:flex; }
 .lb img{ max-height:100%; max-width:min(100%,760px); width:auto; object-fit:contain; }
 .lb .cap{ position:absolute; left:0; right:0; bottom:22px; text-align:center; }
@@ -246,11 +249,11 @@ h1,h2,h3,h4{ margin:0; font-weight:400; }
 @media (hover:hover){ .links a:hover{ background:var(--pink); } }
 
 /* ---------- 푸터 ---------- */
-.foot{ background:var(--ink); color:#D8CFC4; padding:56px 0 60px; font-size:.84rem; }
+.foot{ background:var(--stone); color:var(--ink); padding:56px 0 60px; font-size:.84rem; border-top:1px solid var(--pink-2); }
 .foot .wrap{ display:grid; gap:24px; }
-.foot .mark{ color:var(--white); font-size:1.2rem; }
+.foot .mark{ font-size:1.2rem; }
 .foot p{ margin:0 0 6px; }
-.foot a{ text-decoration:underline; text-decoration-color:rgba(255,255,255,.3); text-underline-offset:3px; }
+.foot a{ text-decoration:underline; text-decoration-color:var(--pink-2); text-underline-offset:3px; }
 
 /* ---------- 리빌 ---------- */
 .reveal{ opacity:0; transform:translateY(18px); transition:opacity 1s ease, transform 1s ease; }
@@ -309,7 +312,7 @@ h1,h2,h3,h4{ margin:0; font-weight:400; }
         <div class="btns">
           <a class="btn dark" href="https://naver.me/xGIjHwsW" target="_blank" rel="noopener">Reserve <small>네이버 예약</small></a>
           <a class="btn pink" href="http://pf.kakao.com/_ZLjTn" target="_blank" rel="noopener">Kakao <small>상담·문의</small></a>
-          <a class="btn white" href="https://www.instagram.com/sisun.studio_/" target="_blank" rel="noopener">Instagram <small>인스타그램</small></a>
+          <a class="btn line" href="https://www.instagram.com/sisun.studio_/" target="_blank" rel="noopener">Instagram <small>인스타그램</small></a>
         </div>
       </div>
       <figure class="frame reveal" style="margin:0">
@@ -320,10 +323,10 @@ h1,h2,h3,h4{ margin:0; font-weight:400; }
     </div>
   </section>
 
-  <section class="sec white haze" id="philosophy" aria-labelledby="philo-h">
+  <section class="sec mist haze" id="philosophy" aria-labelledby="philo-h">
     <div class="wrap manifesto">
       <div class="reveal">
-        <p class="caps" style="margin:0 0 18px;color:var(--soft)">Philosophy · 시선의 철학</p>
+        <p class="caps" style="margin:0 0 18px;color:var(--soft)">Philosophy<span class="ko-t">시선의 철학</span></p>
         <blockquote id="philo-h">“Everyone’s eyes are different. Find the harmonious lashes that work best for you. Beautiful, and truly you.”<small>사람마다 눈매는 모두 달라요. 한 분 한 분 꼼꼼한 상담으로, 유행만 따라가는 공장형 속눈썹이 아닌 가장 잘 어울리는 속눈썹을 찾아드립니다.</small></blockquote>
         <div class="trio"><span>Personal <small class="ko-s">퍼스널</small></span><span>Harmony <small class="ko-s">조화</small></span><span>Naturalness <small class="ko-s">자연스러움</small></span></div>
       </div>
@@ -337,10 +340,10 @@ h1,h2,h3,h4{ margin:0; font-weight:400; }
     </div>
   </section>
 
-  <section class="sec sand" id="lash" aria-labelledby="lash-h">
+  <section class="sec white" id="lash" aria-labelledby="lash-h">
     <div class="wrap">
       <div class="head reveal">
-        <p class="caps" style="margin:0">Lash Menu · 속눈썹 메뉴</p>
+        <p class="caps" style="margin:0">Lash Menu<span class="ko-t">속눈썹 메뉴</span></p>
         <h2 id="lash-h">Extensions <em>&amp;</em> perms.<span class="ko-t">속눈썹 연장 &amp; 펌</span></h2>
         <p>Comfortable, light lashes. Quality, comfort and lasting hold.<span class="ko-t">편안하고 가벼운 속눈썹. 퀄리티 · 눈편함 · 유지력</span></p>
       </div>
@@ -388,7 +391,7 @@ h1,h2,h3,h4{ margin:0; font-weight:400; }
       <figure class="reveal"><span class="tag">Brow · PMU</span><img loading="lazy" src="ss-mood.webp" alt="흰 장미 꽃다발과 화병" width="900" height="1125" /></figure>
       <div>
         <div class="head reveal" style="margin-bottom:32px">
-          <p class="caps" style="margin:0">Brow · PMU · 눈썹 반영구</p>
+          <p class="caps" style="margin:0">Brow · PMU<span class="ko-t">눈썹 반영구</span></p>
           <h2 id="brow-h">Brows, <em>by your face.</em><span class="ko-t">얼굴 윤곽에 맞춘 눈썹</span></h2>
           <p>Contour-analyzed brow tattoo, designed around the shape of your face.<span class="ko-t">얼굴 윤곽을 분석해 디자인하는 눈썹문신 · 잔흔제거 · 헤어라인</span></p>
         </div>
@@ -413,7 +416,7 @@ h1,h2,h3,h4{ margin:0; font-weight:400; }
   <section class="sec white haze" id="gallery" aria-labelledby="gallery-h">
     <div class="wrap">
       <div class="head center reveal">
-        <p class="caps" style="margin:0">Gallery · 갤러리</p>
+        <p class="caps" style="margin:0">Gallery<span class="ko-t">갤러리</span></p>
         <h2 id="gallery-h">Lashes that look <em>like you.</em><span class="ko-t">나에게 가장 잘 어울리는 속눈썹</span></h2>
         <p>사진을 누르면 크게 볼 수 있어요.</p>
       </div>
@@ -466,10 +469,10 @@ h1,h2,h3,h4{ margin:0; font-weight:400; }
     <p class="cap caps"></p>
   </div>
 
-  <section class="sec sand" id="guide" aria-labelledby="guide-h">
+  <section class="sec mist" id="guide" aria-labelledby="guide-h">
     <div class="wrap two">
       <div class="head reveal">
-        <p class="caps" style="margin:0">Before your visit · 방문 전 안내</p>
+        <p class="caps" style="margin:0">Before your visit<span class="ko-t">방문 전 안내</span></p>
         <h2 id="guide-h">Good to <em>know.</em><span class="ko-t">알아두시면 좋아요</span></h2>
         <p>예약 전에 한 번 읽어주세요.</p>
       </div>
